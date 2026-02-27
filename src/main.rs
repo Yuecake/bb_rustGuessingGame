@@ -18,12 +18,13 @@ fn main() { // entry point into the program
     // thread_rng() allows us to use a rng that is local to the current thread 
     // of execution and is seeded by the OS.
 
-    loop {
-        println!("Please input your guess.");
-
-        let mut guess = String::new(); // stores the user input as a var, new instance of a String type
+    let mut guess = String::new(); // stores the user input as a var, new instance of a String type
         // rust variables are not mutable by default, so use "mut" keyword to make it mutable.
         // The :: syntax indicates that new() is an associated function of the String type.
+
+    loop {
+        guess.clear(); // ← reset String to empty
+        println!("Please input your guess.");
 
         io::stdin()
         // The stdin function returns an instance of std::io::Stdin, 
