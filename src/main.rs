@@ -23,7 +23,7 @@ fn main() { // entry point into the program
         // The :: syntax indicates that new() is an associated function of the String type.
 
     loop {
-        guess.clear(); // ← reset String to empty
+        guess.clear(); // reset String to empty at start of each iteration
         println!("Please input your guess.");
 
         io::stdin()
